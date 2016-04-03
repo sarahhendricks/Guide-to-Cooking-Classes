@@ -19,7 +19,10 @@ class simpleCMS {
 	}
 
 	public function connect() {
+		mysql_connect($this->host, $this->username, $this->password) or die("Could not connect to database");
+		mysql_select_db($this->table) or die("Could not select database. " . mysql_error());
 
+		return $this->buildDB();
 	}
 
 	public function buildDB() {
