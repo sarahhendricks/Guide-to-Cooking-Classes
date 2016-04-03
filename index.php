@@ -19,6 +19,7 @@
 				<ul>
 					<div id="float-left">
 						<li><a href="index.php">Home</a></li>
+						<!-- Make text bigger -->
 					</div>
 					<div id="float-right">
 						<li><a href="help.php">About</a></li>
@@ -30,15 +31,18 @@
 	</header>
 
 	<div id="content">
-		<a>
+		<a href="">
 			<div id="jumbo">
+				<!-- photo - links to something? -->
 			</div>
 		</a>
 		<div id="welcome">
+			<!-- Some paragraphs about what the project is -->
 		</div>
-		<div id="products-special">
-		</div>
-		<div id="story">
+		<div id="classes">
+			<!-- 	php here for adding individual places.
+					This needs to be able to update when the admin
+					adds new places to take classes -->
 		</div>
 
 	</div>
