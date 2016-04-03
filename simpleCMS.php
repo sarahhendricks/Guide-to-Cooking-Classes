@@ -25,8 +25,18 @@ ADMIN_FORM;
 
 	}
 
-	public function write() {
-
+	public function write($p) {
+		if ($p['title']) 
+			$title = mysql_real_escape_string($p['title']);
+		if ($p['bodytext'])
+			$bodytext = mysql_real_escape_string($p['bodytext']);
+		if ($title && $bodytext ) {
+			$created = time();
+			$sql = "INSERT INTO testDB VALUES('$title', '$bodytext', '$created')";
+			return mysql_query($sql);
+		} else {
+			return false;
+		}
 	}
 
 	public function connect() {
