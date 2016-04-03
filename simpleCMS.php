@@ -8,7 +8,38 @@ class simpleCMS {
 
 	public function display_public() {
 
+		$q = "SELECT * FROM testDB ORDER BY created DESC";
+		$r = mysql_query($q);
+
+		if ($r !== flase && mysql_num_rows($r) > 0) {
+			while ($a = mysql_fetch_assoc($r)) {
+				$title = stripcslashes($a['title']);
+				$bodytext = stripcslashes($a['bodytext']);
+
+				$entry_display .= <<<ENTRY_DISPLAY
+
+					<h2>$title</h2>
+					<p> $bodytext </p>
+
+ENTRY_DISPLAY;
+			}
+		} else {
+			$entry_display = <<<ENTRY_DISPLAY
+		<h2>This page is under construction.</h2>
+		<p>No entries have been made on this page.
+		Check back soon! </p>
+ENTRY_DISPLAY;
+		}
+
+		$entry_display .= <<<ADMIN_OPTION 
+			<p class="admin_link">
+				<a href="{$_SERVER['PHP_SELF']}?admin=1">Add a new Entry</a>
+			</p>
+ADMIN_OPTION;
+
+		return $entry_display;
 	}
+
 
 	public function display_admin() {
 		return <<<ADMIN_FORM
