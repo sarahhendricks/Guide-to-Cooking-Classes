@@ -11,6 +11,17 @@ class simpleCMS {
 	}
 
 	public function display_admin() {
+		return <<<ADMIN_FORM
+<h1>Add Class</h1>
+<form id="" action="" method="post" onsubmit="return ">
+	<input type="text" placeholder="Company Name" name="name" id="name" /><br />
+	<textarea placeholder="Company description" name="description" id="description"></textarea><br />
+	<input type="text" placeholder="Price ($$$.$$)" name="price" id="price" /><br />
+	<input type="text" placeholder="Photo Reference (file.jpg)" name="photoref" id="photoref" /><br />
+	<input type="text" placeholder="Tags" name="tags" id="tags" /><br />
+	<input type="submit" value="Submit" />
+</form>
+ADMIN_FORM;
 
 	}
 
