@@ -31,18 +31,15 @@
 	</header>
 
 	<div id="content">
-		<a href="">
-			<div id="jumbo">
-				<!-- photo - links to something? -->
-			</div>
-		</a>
-		<div id="welcome">
-			<!-- Some paragraphs about what the project is -->
-		</div>
-		<div id="classes">
-			<!-- 	php here for adding individual places.
-					This needs to be able to update when the admin
-					adds new places to take classes -->
+		
+		<div class="form-box">
+			<h1>Log In</h1>
+			<form action="" method="post" onsubmit="return checkLoginFields(this)">
+				<input type="text" placeholder="Username" name="username" id="username" /><br />
+				<input type="password" placeholder="Password" name="password" id="passowrd" /><br />
+				<input type="submit" value="Submit" name="submit" id="submit" />
+			</form>
+			<span><?php echo $error; ?></span>
 		</div>
 
 	</div>
