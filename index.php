@@ -45,6 +45,22 @@
 					adds new places to take classes -->
 		</div>
 
+		<?php
+			include_once('_class/simpleCMS.php');
+			$obj = new simpleCMS();
+			$obj->host = 'localhost';
+			$obj->username = 'root';
+			$obj->password = 'root';
+			$obj->table = 'DB1234567';
+			$obj->connect();
+
+
+			if ($_POST)
+				$obj->write($_POST);
+
+			echo ($_GET['admin'] == 1) ? $obj->display_admin() : $obj->display_public();
+		?>
+
 	</div>
 
 	<footer>
