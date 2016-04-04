@@ -1,83 +1,64 @@
-<?php
+<?php 
+//check if this file has been included
+//otherwise, throw error --> check if constant 'included' has been defined
+//  this happens in the config file
 
-if (!defined('included')){
-die('You cannot access this file directly!');
+if (!defined('included')) {
+    die('You cannot access this file directly!');
 }
 
-//log user in ---------------------------------------------------
-function login($user, $pass){
+//all of these functions will be used by the CMS
 
-   //strip all tags from varible   
-   $user = strip_tags(mysql_real_escape_string($user));
-   $pass = strip_tags(mysql_real_escape_string($pass));
+//logs user in ---------------------------------------------------
+function login($username, $password) {
+    //sanitize variables
+    $username = stripslashes(mysql_real_escape_string($username));
+    $password = stripslashes(mysql_real_escape_string($password));
 
-   $pass = md5($pass);
+    //encrypt the password - currently using MD5, not considered "safe" but may be good enough for this project
+    $password = md5($password);
 
-   // check if the user id and password combination exist in database
-   $sql = "SELECT * FROM members WHERE username = '$user' AND password = '$pass'";
-   $result = mysql_query($sql) or die('Query failed. ' . mysql_error());
-      
-   if (mysql_num_rows($result) == 1) {
-      // the username and password match,
-      // set the session
-      $_SESSION['authorized'] = true;
-                      
-      // direct to admin
-      header('Location: '.DIRADMIN);
-      exit();
-   } else {
-    // define an error message
-    $_SESSION['error'] = 'Sorry, wrong username or password';
-   }
-}
+    //check if user is in database
+    $sql = "SELECT * FROM members WHERE username = '$user' AND password = '$password'";
+    $result = mysql_query($sql) or die('Query failed. '.mysql_error());
 
-// Authentication
-function logged_in() {
-    if($_SESSION['authorized'] == true) {
-        return true;
-    } else {
-        return false;
-    }    
-}
+    //if there is a match...
+    if (mysql_num_rows($result) == 1) {
+        //set the session
+        $_SESSION['authorized'] = true;
 
-function login_required() {
-    if(logged_in()) {    
-        return true;
-    } else {
-        header('Location: '.DIRADMIN.'login.php');
+        //direct to admin
+        header('Location: '.DIRADMIN);
         exit();
-    }    
+    } else {
+        //define error message if fail
+        $_SESSION['error'] = 'Sorry, wrong username or password';
+    }
 }
 
-function logout(){
-    unset($_SESSION['authorized']);
-    header('Location: '.DIRADMIN.'login.php');
-    exit();
+//returns true/false depending on whether user logged in ----------
+function logged_in() {
+
 }
 
-// Render error messages
+//checks if logged in --> if not, redirects to login page ---------
+function login_required() {
+
+}
+
+//logs user out ---------------------------------------------------
+function logout() {
+
+}
+
+//shows any notifications -----------------------------------------
 function messages() {
-    $message = '';
-    if($_SESSION['success'] != '') {
-        $message = '<div class="msg-ok">'.$_SESSION['success'].'</div>';
-        $_SESSION['success'] = '';
-    }
-    if($_SESSION['error'] != '') {
-        $message = '<div class="msg-error">'.$_SESSION['error'].'</div>';
-        $_SESSION['error'] = '';
-    }
-    echo "$message";
+
 }
 
-function errors($error){
-    if (!empty($error))
-    {
-            $i = 0;
-            while ($i < count($error)){
-            $showError.= "<div class="msg-error">".$error[$i]."</div>";
-            $i ++;}
-            echo $showError;
-    }// close if empty errors
-} // close function
+//shows any errors ------------------------------------------------
+function errors() {
+
+}
 
 ?>
