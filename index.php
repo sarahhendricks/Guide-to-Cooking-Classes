@@ -1,11 +1,12 @@
 <?php 
 	require 'includes/config.php';
+	//echo 'files included';
 ?>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" />
 <head>
-	<title>Guide to DC Cooking Classes</title>
+	<title><?php echo SITETITLE;?></title>
 	<meta charset="utf-8" />
 	<link type="text/css" rel="stylesheet" href="style.css" />
 	<script></script>
@@ -42,7 +43,14 @@
 		<div id="classes">
 			<!-- 	php here for adding individual places.
 					This needs to be able to update when the admin
-					adds new places to take classes -->
+					adds new places to take classes 
+				while (there are still enteries in the database) {
+					make a div
+					put in the image, title, paragraph, link
+
+				}
+				-->
+
 		</div>
 
 
