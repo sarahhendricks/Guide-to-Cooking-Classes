@@ -26,11 +26,11 @@ define('DIR','http://http://localhost:8888/Guide%20to%20Cooking%20Classes/index.
 define('DIRADMIN','http://http://localhost:8888/Guide%20to%20Cooking%20Classes/index.php/admin/');
 
 // define site title for top of the browser
-define('SITETITLE','Simple CMS');
+define('SITETITLE','Guide to Cooking Classes in DC');
 
 //define include checker
 define('included', 1);
 
 //include('functions.php');
-
+// THIS BREAKS
 ?>
