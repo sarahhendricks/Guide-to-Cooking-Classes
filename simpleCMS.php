@@ -18,23 +18,23 @@ class simpleCMS {
 
 				$entry_display .= <<<ENTRY_DISPLAY
 
-					<h2>$title</h2>
-					<p> $bodytext </p>
+<h2>$title</h2>
+<p> $bodytext </p>
 
 ENTRY_DISPLAY;
 			}
 		} else {
 			$entry_display = <<<ENTRY_DISPLAY
-		<h2>This page is under construction.</h2>
-		<p>No entries have been made on this page.
-		Check back soon! </p>
+<h2>This page is under construction.</h2>
+<p>No entries have been made on this page.
+Check back soon! </p>
 ENTRY_DISPLAY;
 		}
 
 		$entry_display .= <<<ADMIN_OPTION 
-			<p class="admin_link">
-				<a href="{$_SERVER['PHP_SELF']}?admin=1">Add a new Entry</a>
-			</p>
+<p class="admin_link">
+<a href="{$_SERVER['PHP_SELF']}?admin=1">Add a new Entry</a>
+</p>
 ADMIN_OPTION;
 
 		return $entry_display;
@@ -71,7 +71,7 @@ ADMIN_FORM;
 	}
 
 	public function connect() {
-		mysql_connect($this->host, $this->username, $this->password) or die("Could not connect to database");
+		mysql_connect($this->host, $this->port, $this->username, $this->password) or die("Could not connect to database");
 		mysql_select_db($this->table) or die("Could not select database. " . mysql_error());
 
 		return $this->buildDB();

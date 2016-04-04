@@ -46,9 +46,10 @@
 		</div>
 
 		<?php
-			include_once('_class/simpleCMS.php');
+			include_once('simpleCMS.php');
 			$obj = new simpleCMS();
 			$obj->host = 'localhost';
+			$obj->port = 8889;
 			$obj->username = 'root';
 			$obj->password = 'root';
 			$obj->table = 'DB1234567';
