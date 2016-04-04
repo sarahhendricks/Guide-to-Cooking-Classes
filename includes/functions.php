@@ -38,17 +38,31 @@ function login($username, $password) {
 
 //returns true/false depending on whether user logged in ----------
 function logged_in() {
+    if($_SESSION['authorized'] == true) {
+        return true;
+    } else {
+        return false;
+    }
 
 }
 
 //checks if logged in --> if not, redirects to login page ---------
 function login_required() {
+    if(logged_in()) {
+        return true;
+    } else {
+        header('Location: '.DIRADMIN.'login.php');
+        exit();
+    }
 
 }
 
 //logs user out ---------------------------------------------------
 function logout() {
-
+    //unset the session & redirect user to login page
+    unset($_SESSION['authorized']);
+    header('Location: '.DIRADMIN.'login.php');
+    exit();
 }
 
 //shows any notifications -----------------------------------------
