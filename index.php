@@ -1,5 +1,5 @@
-<?php
-	session_start();
+<?php 
+	include 'includes/config.php';
 ?>
 
 <!DOCTYPE html>
@@ -45,9 +45,6 @@
 					adds new places to take classes -->
 		</div>
 
-		<?php 
-			include 'includes/config.php';
-		?>
 
 	</div>
 
