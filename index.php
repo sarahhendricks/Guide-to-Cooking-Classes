@@ -50,7 +50,25 @@
 
 				}
 				-->
+			<?php
+		    $result = mysql_query("SELECT * FROM CLASSES;");
 
+		    //query the database & print out 
+		    if (mysql_num_rows($result) == 0) {
+		    	print "Sorry, we don't have any classes right now.";
+		    }
+		    while ($row = mysql_fetch_array($result)) {
+		        print "<div class="">
+		        <img>
+		        <h4></h4>
+		        <p></p>
+		        <a></a>
+		        </div>";
+		    }
+
+		    mysql_free_result($result);
+		    mysql_close();
+		    ?>	
 		</div>
 
 
