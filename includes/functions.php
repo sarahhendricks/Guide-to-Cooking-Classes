@@ -82,7 +82,12 @@ function messages() {
 
 //shows any errors ------------------------------------------------
 function errors() {
-
+    if(!empty($error)) {
+        for($i = 0; $i < count($error); $i++) {
+            $showError .= '<div class="msg-error">'.$error[i].'</div';
+        }
+        echo $showError;
+    }
 }
 
 ?>
