@@ -17,3 +17,18 @@
 		exit();
 	}
 ?>
+
+<!-- begin admin homepage -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" />
+<head>
+	<title><?php echo SITETITLE;?></title>
+	<meta charset="utf-8" />
+	<link type="text/css" rel="stylesheet" href="style.css" />
+	<script></script>
+</head>
+
+<body>
+	
+</body>
+</html>
