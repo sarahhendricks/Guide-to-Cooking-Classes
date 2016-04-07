@@ -25,7 +25,7 @@
 	<title><?php echo SITETITLE;?></title>
 	<meta charset="utf-8" />
 	<link type="text/css" rel="stylesheet" href="style.css" />
-	<script type="tex/javascript">
+	<script type="text/javascript">
 		//create popup to deal with wanting to delete page
 		function delpage(id, title) {
 			if (confirm("Are you sure you want to delete '"+title+"'?")) {
@@ -58,16 +58,21 @@
 					echo "<tr>";
 						echo "<td>$row->pageTitle</td>";
 						if ($row->pageID == 1) {
-							//id of homepage, delete link
+							//id of homepage, don't include delete link
 							echo "<td><a href=\"\">Edit</a></td>";
 						} else {
-							echo "<td><a href=\"\">Edit</a> | <a href=\"\">Delete</a></td>";
+							//otherwise, inlcude delete button
+							//FIX LINKS
+							echo "<td><a href=\"\">Edit</a> | <a href=\"\" onclick=\"javascript:delpage('$row->pageID','$row->pageTitle');\">Delete</a></td>";
 						}
 						
 					echo "</tr>";
 				}
 			?>
 		</table>
+
+		<!-- link to create new pages -->
+		<p><a href="" class="button">Add Page</a></p>
 	</div>
 	
 </body>
