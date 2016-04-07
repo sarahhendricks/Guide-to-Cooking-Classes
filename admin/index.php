@@ -25,10 +25,25 @@
 	<title><?php echo SITETITLE;?></title>
 	<meta charset="utf-8" />
 	<link type="text/css" rel="stylesheet" href="style.css" />
-	<script></script>
+	<script type="tex/javascript">
+		//create popup to deal with wanting to delete page
+		function delpage(id, title) {
+			if (confirm("Are you sure you want to delete '"+title+"'?")) {
+				window.location.href='<?php echo DIRADMIN;?>?delpage='+id;
+			}
+		}
+	</script>
 </head>
 
 <body>
+	<h1>Admin Homepage</h1>
+	<nav>
+		<ul>
+			<li><a href="<?php echo DIRADMIN;?>">Admin Homepage</a></li>
+			<li><a href="<?php echo DIR;?>" target="_blank">View Website</a></li>
+			<li><a href="<?php ?>">Logout</a></li>
+		</ul>
+	</nav>
 	
 </body>
 </html>
