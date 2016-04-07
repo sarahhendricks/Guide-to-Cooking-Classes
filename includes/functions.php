@@ -67,7 +67,17 @@ function logout() {
 
 //shows any notifications -----------------------------------------
 function messages() {
-
+    $message = '';
+    //if the message arrays aren't empty, show them in the divs
+    if($_SESSION['success'] != '') {
+        $message = '<div class="msg-ok">'.$_SESSION['success'].'</div>';
+        $_SESSION['success'] = '';
+    }
+    if($_SESSION['error'] != '') {
+        $message = '<div class="msg-error">'.$_SESSION['error'].'</div>';
+        $_SESSION['error'] = '';
+    }
+    echo "$message";
 }
 
 //shows any errors ------------------------------------------------
