@@ -14,6 +14,10 @@
     <script></script>
 </head>
 <body>
-    
+    <form method="post" action="">
+        <p><label>Username</label><input type="text" name="username" id="username"></p>
+        <p><label>Password</label><input type="password" name="password" id="password"></p>
+        <p><br><input type="submit" name="submit" class="submit-button" value="login"></p>
+    </form>
 </body>
 </html>
