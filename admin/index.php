@@ -44,6 +44,31 @@
 			<li><a href="<?php ?>">Logout</a></li>
 		</ul>
 	</nav>
+
+	<div class="pages">
+		<table>
+			<tr>
+				<th>Title</th>
+				<th>Action</th>
+			</tr>
+			<?php
+				//get the classes by id
+				$sql = mysql_query("SELECt * FROM pages ORDER BY pageID");
+				while($row = mysql_fetch_object($sql)) {
+					echo "<tr>";
+						echo "<td>$row->pageTitle</td>";
+						if ($row->pageID == 1) {
+							//id of homepage, delete link
+							echo "<td><a href=\"\">Edit</a></td>";
+						} else {
+							echo "<td><a href=\"\">Edit</a> | <a href=\"\">Delete</a></td>";
+						}
+						
+					echo "</tr>";
+				}
+			?>
+		</table>
+	</div>
 	
 </body>
 </html>
