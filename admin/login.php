@@ -1,9 +1,13 @@
+
 <?php 
     //check if user is already logged in
     //if they aren't direct them to the login screen
+    
     require('../includes/config.php'); 
-    if(logged_in()) {header('Location: '.DIRADMIN);}
-?>
+    //if(logged_in()) {
+        //header('Location: '.DIRADMIN);
+    //}
+?> 
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" />
@@ -19,5 +23,13 @@
         <p><label>Password</label><input type="password" name="password" id="password"></p>
         <p><br><input type="submit" name="submit" class="submit-button" value="login"></p>
     </form>
+
+    <?php
+        //if the form has been submitted, send to login function
+        if($_POST['submit']) {
+            login($_POST['username'], $_POST['password']);
+        }
+    ?>
+    
 </body>
 </html>

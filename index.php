@@ -51,7 +51,7 @@
 				}
 				-->
 			<?php
-		    $result = mysql_query("SELECT * FROM CLASSES;");
+		    $result = mysql_query("SELECT * FROM pages;");
 
 
 		    //query the database & print out 
@@ -62,7 +62,7 @@
 		    	
 			    while ($row = mysql_fetch_array($result)) {
 
-			        print "<div class=\"\"><img><h4>Title</h4><p>Hello</p><a></a></div>"; 
+			        print "<div class=\"\"><img><h4>".$row['pageTitle']."</h4>".$row['pageCont']."<a></a></div>"; 
 			    }
 			   
 			}
