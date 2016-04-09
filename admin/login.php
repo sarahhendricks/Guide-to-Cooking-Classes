@@ -5,7 +5,7 @@
     
     require('../includes/config.php'); 
     //if(logged_in()) {
-        //header('Location: '.DIRADMIN);
+    //    header('Location: index.php');
     //}
 ?> 
 

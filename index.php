@@ -24,7 +24,7 @@
 					</div>
 					<div id="float-right">
 						<li><a href="help.php">About</a></li>
-						<li id="sign-in"><a href="signin.php">Sign In</a></li>
+						<li id="sign-in"><a href="admin/login.php">Sign In</a></li>
 					</div>
 				</ul>
 			</div>
@@ -51,23 +51,17 @@
 				}
 				-->
 			<?php
-		    $result = mysql_query("SELECT * FROM pages;");
-
-
-		    //query the database & print out 
-		    if (mysql_num_rows($result) == 0) {
-		    	print "Sorry, we don't have any classes right now.";
-		    }
-		    else {
-		    	
-			    while ($row = mysql_fetch_array($result)) {
-
-			        print "<div class=\"\"><img><h4>".$row['pageTitle']."</h4>".$row['pageCont']."<a></a></div>"; 
+			    $result = mysql_query("SELECT * FROM pages;");
+			    //query the database & print out 
+			    if (mysql_num_rows($result) == 0) {
+			    	print "Sorry, we don't have any classes right now.";
 			    }
-			   
-			}
-		    mysql_free_result($result);
-		    
+			    else {
+				    while ($row = mysql_fetch_array($result)) {
+				        print "<div class=\"\"><img><h4>".$row['pageTitle']."</h4>".$row['pageCont']."<a></a></div>"; 
+				    }
+				}
+			    mysql_free_result($result);
 		    ?>	
 		</div>
 
