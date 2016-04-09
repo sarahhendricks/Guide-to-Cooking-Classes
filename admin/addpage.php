@@ -1,3 +1,20 @@
+<?php 
+    require('../includes/config.php');
+
+    if(isset($_POST['submit'])) {
+        $title = $_POST['pageTitle'];
+        $content = $_POST['pageCont'];
+
+        $title = mysql_real_escape_string($title);
+        $content = mysql_real_escape_string($content);
+
+        mysql_query("INSERT INTO pages (pageTitle, pageCont) VALUES ('$title','$content')") or die(mysql_error());
+        $_SESSION['success'] = 'Page added.';
+        header('Location: ' .DIRADMIN);
+        exit();
+    }
+?>
+
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" />
 <head>
