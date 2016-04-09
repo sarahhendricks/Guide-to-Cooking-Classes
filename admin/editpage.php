@@ -1,15 +1,22 @@
 <?php 
-    require('../includes/config.php');
+    if (!isset($_GET['id']) || $_GET['id'] == '') {
+        header('Location: '.DIRADMIN);
+    }
 
-    if(isset($_POST['submit'])) {
+    $id = $_GET['id'];
+    $id = mysql_real_escape_string($id);
+    $query = mysql_query("SELECT * FROM pages WHERE pageID='$id'");
+    $row = mysql_fetch_object($q);
+
+    if (isset($_POST['submit'])) {
         $title = $_POST['pageTitle'];
         $content = $_POST['pageCont'];
 
         $title = mysql_real_escape_string($title);
         $content = mysql_real_escape_string($content);
 
-        mysql_query("INSERT INTO pages (pageTitle, pageCont) VALUES ('$title','$content')") or die(mysql_error());
-        $_SESSION['success'] = 'Page added.';
+        mysql_query("UPDATE pages SET pageTitle='$title', pageCont='$content' WHERE pageID='$pageID'") or die(mysql_error());
+        $_SESSION['success'] = 'Page updated.';
         //header('Location: ' .DIRADMIN);
         exit();
     }
@@ -35,10 +42,11 @@
 
     <div class="add-page">
         <form action="" method="post">
+            <input type="hidden" name="pageID" value="<?php echo $row->pageID;?>">
             <p>Title: </p><br>
-            <input name="pageTitle" id="pageTitle" value="" type="text" size="103">
+            <input name="pageTitle" id="pageTitle" value="<?php echo $row->pageTitle; ?>" type="text" size="103">
             <p>Content</p><br>
-            <textarea name="pageCont" id="pageCont" cols="100" rows="20"></textarea>
+            <textarea name="pageCont" id="pageCont" cols="100" rows="20"><?php echo $row->pageCont; ?></textarea>
             <p><input type="submit" name="submit" id="submit" value="Submit"></p>
         </form>
     </div>
