@@ -15,8 +15,6 @@ function login($username, $password) {
     $username = stripslashes(mysql_real_escape_string($username));
     $password = stripslashes(mysql_real_escape_string($password));
 
-    echo $username;
-    echo $password;
     //encrypt the password - currently using MD5, not considered "safe" but may be good enough for this project
     $password = md5($password);
 

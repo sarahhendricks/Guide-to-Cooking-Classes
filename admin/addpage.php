@@ -10,7 +10,7 @@
 
         mysql_query("INSERT INTO pages (pageTitle, pageCont) VALUES ('$title','$content')") or die(mysql_error());
         $_SESSION['success'] = 'Page added.';
-        //header('Location: ' .DIRADMIN);
+        header('Location: ' .DIRADMIN);
         exit();
     }
 ?>

@@ -20,10 +20,10 @@ $conn = mysql_select_db(DBNAME) or die("Can't connect to the database");
 
 
 // define site path
-define('DIR','http://http://localhost:8888/Guide%20to%20Cooking%20Classes/index.php');
+define('DIR','http://localhost:8888/Guide%20to%20Cooking%20Classes/index.php');
 
 // define admin site path
-define('DIRADMIN','http://http://localhost:8888/Guide%20to%20Cooking%20Classes/index.php/admin/');
+define('DIRADMIN','http://localhost:8888/Guide%20to%20Cooking%20Classes/admin/index.php');
 
 // define site title for top of the browser
 define('SITETITLE','Guide to Cooking Classes in DC');
@@ -31,6 +31,6 @@ define('SITETITLE','Guide to Cooking Classes in DC');
 //define include checker
 define('included', 1);
 
-//include('functions.php');
-// THIS BREAKS
+include('functions.php');
+
 ?>
