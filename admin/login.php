@@ -4,8 +4,10 @@
     //if they aren't direct them to the login screen
     
     require '../includes/config.php'; 
-    if(logged_in()) {header('Location: '.DIRADMIN);}
-    
+    if(logged_in()) {
+        echo "you're already logged in!";
+        header('Location: '.DIRADMIN);
+    }
 ?> 
 
 <!DOCTYPE html>

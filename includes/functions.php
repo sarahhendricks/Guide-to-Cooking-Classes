@@ -31,6 +31,7 @@ function login($username, $password) {
         //direct to admin
         echo "redirecting to homepage";
         header('Location: '.DIRADMIN);
+        echo "just redirected";
         exit();
     } else {
         //define error message if fail
@@ -63,6 +64,7 @@ function login_required() {
 function logout() {
     //unset the session & redirect user to login page
     unset($_SESSION['authorized']);
+    echo "you have been logged out";
     header('Location: '.DIRADMIN.'login.php');
     exit();
 }

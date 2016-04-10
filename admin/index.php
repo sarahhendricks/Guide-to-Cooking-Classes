@@ -41,7 +41,7 @@
 		<ul>
 			<li><a href="<?php echo DIRADMIN;?>">Admin Homepage</a></li>
 			<li><a href="<?php echo DIR;?>" target="_blank">View Website</a></li>
-			<li><a href="<?php ?>">Logout</a></li>
+			<li><a href="<?php echo DIRADMIN;?>?logout">Logout</a></li>
 		</ul>
 	</nav>
 
