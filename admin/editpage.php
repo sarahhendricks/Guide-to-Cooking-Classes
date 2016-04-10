@@ -6,14 +6,12 @@
         header('Location: '.DIRADMIN);
     }
 
-    $id = $_GET['id'];
-    $id = mysql_real_escape_string($id);
-    $query = mysql_query("SELECT * FROM pages WHERE pageID='$id'");
-    $row = mysql_fetch_object($q);
+
 
     if (isset($_POST['submit'])) {
         $title = $_POST['pageTitle'];
         $content = $_POST['pageCont'];
+        $pageID = $_POST['pageID'];
 
         $title = mysql_real_escape_string($title);
         $content = mysql_real_escape_string($content);
@@ -44,6 +42,14 @@
     </nav>
 
     <div class="add-page">
+        <?php
+        $id = $_GET['id'];
+        $id = mysql_real_escape_string($id);
+        $query = mysql_query("SELECT * FROM pages WHERE pageID='$id'");
+        
+        $row = mysql_fetch_object($query);
+        //echo $row;
+        ?>
         <form action="" method="post">
             <input type="hidden" name="pageID" value="<?php echo $row->pageID;?>">
             <p>Title: </p><br>
