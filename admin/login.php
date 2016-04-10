@@ -3,10 +3,8 @@
     //check if user is already logged in
     //if they aren't direct them to the login screen
     
-    require('../includes/config.php'); 
-    if(logged_in()) {
-        header('Location: '.DIRADMIN);
-    }
+    require '../includes/config.php'; 
+    if(logged_in()) {header('Location: '.DIRADMIN);}
     
 ?> 
 
@@ -21,8 +19,9 @@
 <body>
     <?php
     if($_POST['submit']) {
-        login($_POST['username'], $_POST['password']);
         echo "login submitted";
+        login($_POST['username'], $_POST['password']);
+        
     }
     ?>
     <p><?php echo messages();?></p>

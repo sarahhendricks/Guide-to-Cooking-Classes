@@ -24,11 +24,13 @@ function login($username, $password) {
 
     //if there is a match...
     if (mysql_num_rows($result) == 1) {
+        echo "There is a match.";
         //set the session
         $_SESSION['authorized'] = true;
-
+        echo "session set to authorized";
         //direct to admin
-        header('Location: '.DIRADMIN.'index.php');
+        echo "redirecting to homepage";
+        header('Location: '.DIRADMIN);
         exit();
     } else {
         //define error message if fail
