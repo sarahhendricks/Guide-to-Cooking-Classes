@@ -1,5 +1,8 @@
 <?php 
+    require('../includes/config.php');
+
     if (!isset($_GET['id']) || $_GET['id'] == '') {
+        //echo "id not given";
         header('Location: '.DIRADMIN);
     }
 
@@ -17,7 +20,7 @@
 
         mysql_query("UPDATE pages SET pageTitle='$title', pageCont='$content' WHERE pageID='$pageID'") or die(mysql_error());
         $_SESSION['success'] = 'Page updated.';
-        //header('Location: ' .DIRADMIN);
+        header('Location: ' .DIRADMIN);
         exit();
     }
 ?>
@@ -31,7 +34,7 @@
 </head>
 
 <body>
-    <h1>Add Page</h1>
+    <h1>Edit Page</h1>
     <nav>
         <ul>
             <li><a href="<?php echo DIRADMIN;?>">Admin Homepage</a></li>

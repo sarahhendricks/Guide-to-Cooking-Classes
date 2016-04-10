@@ -13,7 +13,7 @@
 		$delpage = mysql_real_escape_string($delpage);
 		$sql = mysql_query("DELETE FROM pages WHERE pageID = '$delpage'");
 		$_SESSION['success'] = "Page deleted";
-		header('Location: '.DIRADMIN);
+		header('Location: '.DIRADMIN.'index.php');
 		exit();
 	}
 ?>
@@ -59,11 +59,11 @@
 						echo "<td>$row->pageTitle</td>";
 						if ($row->pageID == 1) {
 							//id of homepage, don't include delete link
-							echo "<td><a href=\"\">Edit</a></td>";
+							echo "<td><a href=\"".DIRADMIN."editpage.php?id=$row->pageID\">Edit</a></td>";
 						} else {
 							//otherwise, inlcude delete button
 							//FIX LINKS
-							echo "<td><a href=\"\">Edit</a> | <a href=\"\" onclick=\"javascript:delpage('$row->pageID','$row->pageTitle');\">Delete</a></td>";
+							echo "<td><a href=\"".DIRADMIN."editpage.php?id=$row->pageID\">Edit</a> | <a href=\"".DIRADMIN."\" onclick=\"javascript:delpage('$row->pageID','$row->pageTitle');\">Delete</a></td>";
 						}
 						
 					echo "</tr>";
@@ -72,7 +72,7 @@
 		</table>
 
 		<!-- link to create new pages -->
-		<p><a href="<?php echo DIRADMIN.'addPage.php';?>" class="button">Add Page</a></p>
+		<p><a href="<?php echo DIRADMIN.'addpage.php';?>" class="button">Add Page</a></p>
 	</div>
 	
 </body>
