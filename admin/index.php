@@ -13,7 +13,7 @@
 		$delpage = mysql_real_escape_string($delpage);
 		$sql = mysql_query("DELETE FROM pages WHERE pageID = '$delpage'");
 		$_SESSION['success'] = "Page deleted";
-		header('Location: '.DIRADMIN.'index.php');
+		header('Location: '.DIRADMIN);
 		exit();
 	}
 ?>
@@ -46,6 +46,9 @@
 	</nav>
 
 	<div class="pages">
+		<?php
+			echo messages();
+		?>
 		<table>
 			<tr>
 				<th>Title</th>
@@ -62,8 +65,7 @@
 							echo "<td><a href=\"".DIRADMIN."editpage.php?id=$row->pageID\">Edit</a></td>";
 						} else {
 							//otherwise, inlcude delete button
-							//FIX LINKS
-							echo "<td><a href=\"".DIRADMIN."editpage.php?id=$row->pageID\">Edit</a> | <a href=\"".DIRADMIN."\" onclick=\"javascript:delpage('$row->pageID','$row->pageTitle');\">Delete</a></td>";
+							echo "<td><a href=\"".DIRADMIN."editpage.php?id=$row->pageID\">Edit</a> <a href=\"javascript:delpage('$row->pageID','$row->pageTitle');\">Delete</a></td>";
 						}
 						
 					echo "</tr>";
