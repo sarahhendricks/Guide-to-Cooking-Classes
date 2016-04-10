@@ -20,10 +20,10 @@ $conn = mysql_select_db(DBNAME) or die("Can't connect to the database");
 
 
 // define site path
-define('DIR','http://localhost:8888/Guide%20to%20Cooking%20Classes/index.php');
+define('DIR','http://localhost:8888/Guide%20to%20Cooking%20Classes/');
 
 // define admin site path
-define('DIRADMIN','http://localhost:8888/Guide%20to%20Cooking%20Classes/admin/index.php');
+define('DIRADMIN','http://localhost:8888/Guide%20to%20Cooking%20Classes/admin/');
 
 // define site title for top of the browser
 define('SITETITLE','Guide to Cooking Classes in DC');

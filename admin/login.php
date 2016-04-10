@@ -4,9 +4,10 @@
     //if they aren't direct them to the login screen
     
     require('../includes/config.php'); 
-    //if(logged_in()) {
-    //    header('Location: index.php');
-    //}
+    if(logged_in()) {
+        header('Location: '.DIRADMIN);
+    }
+    
 ?> 
 
 <!DOCTYPE html>
@@ -18,18 +19,19 @@
     <script></script>
 </head>
 <body>
+    <?php
+    if($_POST['submit']) {
+        login($_POST['username'], $_POST['password']);
+        echo "login submitted";
+    }
+    ?>
+    <p><?php echo messages();?></p>
     <form method="post" action="">
         <p><label>Username</label><input type="text" name="username" id="username"></p>
         <p><label>Password</label><input type="password" name="password" id="password"></p>
         <p><br><input type="submit" name="submit" class="submit-button" value="login"></p>
     </form>
 
-    <?php
-        //if the form has been submitted, send to login function
-        if($_POST['submit']) {
-            login($_POST['username'], $_POST['password']);
-        }
-    ?>
     
 </body>
 </html>

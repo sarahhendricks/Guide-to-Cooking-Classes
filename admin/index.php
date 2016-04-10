@@ -53,7 +53,7 @@
 			</tr>
 			<?php
 				//get the classes by id
-				$sql = mysql_query("SELECt * FROM pages ORDER BY pageID");
+				$sql = mysql_query("SELECT * FROM pages ORDER BY pageID");
 				while($row = mysql_fetch_object($sql)) {
 					echo "<tr>";
 						echo "<td>$row->pageTitle</td>";
@@ -72,7 +72,7 @@
 		</table>
 
 		<!-- link to create new pages -->
-		<p><a href="" class="button">Add Page</a></p>
+		<p><a href="<?php echo DIRADMIN.'addPage.php';?>" class="button">Add Page</a></p>
 	</div>
 	
 </body>

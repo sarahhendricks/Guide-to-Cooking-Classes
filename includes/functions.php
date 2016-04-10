@@ -19,7 +19,7 @@ function login($username, $password) {
     $password = md5($password);
 
     //check if user is in database
-    $sql = "SELECT * FROM members WHERE username = '$user' AND password = '$password'";
+    $sql = "SELECT * FROM members WHERE username = '$username' AND password = '$password'";
     $result = mysql_query($sql) or die('Query failed. '.mysql_error());
 
     //if there is a match...
@@ -28,7 +28,7 @@ function login($username, $password) {
         $_SESSION['authorized'] = true;
 
         //direct to admin
-        header('Location: admin/index.php');
+        header('Location: '.DIRADMIN.'index.php');
         exit();
     } else {
         //define error message if fail
