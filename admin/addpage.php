@@ -1,4 +1,11 @@
 <?php 
+/* ________________________________________________________________________________
+ * This php code is a modified version of a tutorial written by jamesismyname. His 
+ * work can be found at https://github.com/daveismyname/simple-cms
+ *
+ * Author: Sarah Hendricks
+ * ________________________________________________________________________________
+*/
     require('../includes/config.php');
 
     if(isset($_POST['submit'])) {

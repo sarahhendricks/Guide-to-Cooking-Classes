@@ -1,6 +1,12 @@
 <?php 
+/* ________________________________________________________________________________
+ * This php code is a modified version of a tutorial written by jamesismyname. His 
+ * work can be found at https://github.com/daveismyname/simple-cms
+ *
+ * Author: Sarah Hendricks
+ * ________________________________________________________________________________
+*/
 	require 'includes/config.php';
-	//echo 'files included';
 ?>
 
 <!DOCTYPE html>
@@ -41,13 +47,10 @@
 			<!-- Some paragraphs about what the project is -->
 		</div>
 		<div id="classes">
-			<!-- 	php here for adding individual places.
-					This needs to be able to update when the admin
-					adds new places to take classes 
+			<!-- 	
 				while (there are still enteries in the database) {
 					make a div
 					put in the image, title, paragraph, link
-
 				}
 				-->
 			<?php
