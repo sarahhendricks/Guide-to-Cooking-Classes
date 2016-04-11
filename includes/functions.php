@@ -65,7 +65,7 @@ function logout() {
     //unset the session & redirect user to login page
     unset($_SESSION['authorized']);
     echo "you have been logged out";
-    header('Location: '.DIRADMIN.'login.php');
+    header('Location: '.DIR);
     exit();
 }
 

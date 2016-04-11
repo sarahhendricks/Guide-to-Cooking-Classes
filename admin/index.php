@@ -60,13 +60,7 @@
 				while($row = mysql_fetch_object($sql)) {
 					echo "<tr>";
 						echo "<td>$row->pageTitle</td>";
-						if ($row->pageID == 1) {
-							//id of homepage, don't include delete link
-							echo "<td><a href=\"".DIRADMIN."editpage.php?id=$row->pageID\">Edit</a></td>";
-						} else {
-							//otherwise, inlcude delete button
-							echo "<td><a href=\"".DIRADMIN."editpage.php?id=$row->pageID\">Edit</a> <a href=\"javascript:delpage('$row->pageID','$row->pageTitle');\">Delete</a></td>";
-						}
+						echo "<td><a href=\"".DIRADMIN."editpage.php?id=$row->pageID\">Edit</a> | <a href=\"javascript:delpage('$row->pageID','$row->pageTitle');\">Delete</a></td>";
 						
 					echo "</tr>";
 				}
