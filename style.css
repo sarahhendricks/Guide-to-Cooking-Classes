@@ -1,51 +1,91 @@
+body {
+	background-color: ;
+	padding: 0;
+	margin: 0;
+}
+header {
+	top: 120px;
+}
 nav {
+	display: block;
 	margin: 0;
 	padding: 5px;
 	text-align: center;
 	width: 100%;
-
+	background-color: ;
+	height: 20px;
+	top: 20px;
 }
 
 nav ul {
 	list-style-type: none;
 	margin: 0 auto;
 	padding: 0;
-	width: 85%;
+	width: 90%;
+	height: 30px;
+	border-bottom: 1px solid rgba(255,255,255,0.7);
 }
 
 nav li {
 	display: inline;
 	text-align: center;
-	padding: 3px;
+	padding: 0px;
+	margin: 10px;
+	background-color: ;
+	text-transform: uppercase;
+	font-family: Helvetica, sans-serif;
 }
 
 nav a {
 	text-decoration: none;
 	display: inline-block;
-	padding: 8px;
+	padding: 10px;
 	font-size: 14px;
+	color: #fff;
+	letter-spacing: 4px;
 }
 
-#float-left {
+.float-left {
 	float: left;
 }
-#float-left form {
+.float-left form {
 	margin: 0;
 	padding: 0;
 }
-#float-right {
+.float-right {
 	float: right;
-}
-#general-nav a {
-	font-size: 16;
 }
 .search-box {
 	display: inline;
 }
 
+.content {
+	background-color: #fff;
+	margin: 0px;
+}
+
 div {
 	display: block;
 }
+
+.jumbo {
+	width: 100%;
+	height: 700px;
+	background-image: url(photos/ingredient_display.jpeg);
+	background-size: cover;
+}
+
+.jumbo h1 {
+	margin: 0 auto;
+	font-family: Baskerville, Times, serif;
+	font-size: 90px;
+	text-align: center;
+	color: #fff;
+	width: 700px;
+	padding-top: 150px;
+}
+
+
 
 footer {
 	clear: both;
