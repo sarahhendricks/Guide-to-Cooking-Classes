@@ -19,34 +19,28 @@
 </head>
 <body>
 	<header>
-		<div id="Logo">
-		</div>
-		<nav>
-			<div id="general-nav">
+		<div class="jumbo">
+			<nav>
 				<ul>
-					<div id="float-left">
+					<div class="float-left">
 						<li><a href="index.php">Home</a></li>
 						<!-- Make text bigger -->
 					</div>
-					<div id="float-right">
+					<div class="float-right">
 						<li><a href="help.php">About</a></li>
-						<li id="sign-in"><a href="admin/login.php">Sign In</a></li>
+						<li class="sign-in"><a href="admin/login.php">Sign In</a></li>
 					</div>
 				</ul>
-			</div>
-		</nav>
-	</header>
+			</nav>
 
-	<div id="content">
-		<a href="">
-			<div id="jumbo">
-				<!-- photo - links to something? -->
-			</div>
-		</a>
-		<div id="welcome">
-			<!-- Some paragraphs about what the project is -->
+			<h1>Your guide to cooking classes in DC</h1>
 		</div>
-		<div id="classes">
+	</header>
+	<div class="content">
+		<div class="welcome">
+			<p>Here is the welcome</p>
+		</div>
+		<div class="classes">
 			<!-- 	
 				while (there are still enteries in the database) {
 					make a div
