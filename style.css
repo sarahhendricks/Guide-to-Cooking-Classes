@@ -45,6 +45,12 @@ nav a {
 	letter-spacing: 4px;
 }
 
+a:hover {
+	color: #ffD300;
+	/*color: #b40000;
+	color: #1B7200;*/
+}
+
 .float-left {
 	float: left;
 }
