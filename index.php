@@ -42,12 +42,6 @@
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque a odio dui. Aliquam et condimentum nisi. Suspendisse at neque justo. Sed semper metus ac est lobortis, sed consectetur diam iaculis. Duis leo urna, rutrum sit amet mi sed, fermentum maximus ligula. Ut a maximus nunc. Aenean fringilla in enim id tristique. Pellentesque a bibendum tortor, eu semper est.</p>
 		</div>
 		<div class="classes">
-			<!-- 	
-				while (there are still enteries in the database) {
-					make a div
-					put in the image, title, paragraph, link
-				}
-				-->
 			<?php
 			    $result = mysql_query("SELECT * FROM pages;");
 			    //query the database & print out 
@@ -56,7 +50,7 @@
 			    }
 			    else {
 				    while ($row = mysql_fetch_array($result)) {
-				        print "<div class=\"class\"><img><h4>".$row['pageTitle']."</h4>".$row['pageCont']."<a></a></div>"; 
+				        print "<div class=\"class\"><img src=\"".$row['photo']."\" /><h4>".$row['pageTitle']."</h4>".$row['pageCont']."<a></a></div>"; 
 				    }
 				}
 			    mysql_free_result($result);

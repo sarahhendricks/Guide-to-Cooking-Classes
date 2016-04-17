@@ -43,8 +43,10 @@
     <div class="add-page">
         <form action="" method="post">
             <p>Title: </p><br>
-            <input name="pageTitle" id="pageTitle" value="" type="text" size="103">
-            <p>Content</p><br>
+            <input name="pageTitle" id="pageTitle" value="" type="text" size="103" />
+            <p>Photo Link: </p>
+            <input name="photo" id="photo" value="" type="file" size="50" />
+            <p>Content: </p><br>
             <textarea name="pageCont" id="pageCont" cols="100" rows="20"></textarea>
             <p><input type="submit" name="submit" id="submit" value="Submit"></p>
         </form>

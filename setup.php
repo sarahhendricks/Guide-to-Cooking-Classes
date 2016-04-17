@@ -19,14 +19,14 @@ INSERT INTO `members` (`memberID`, `username`, `password`) VALUES
 CREATE TABLE IF NOT EXISTS `pages` (
   `pageID` int(11) NOT NULL AUTO_INCREMENT,
   `pageTitle` varchar(255) DEFAULT NULL,
-  `isRoot` int(11) NOT NULL DEFAULT '1',
+  `photo` varchar(255) DEFAULT NULL,
   `pageCont` text,
   PRIMARY KEY (`pageID`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
-INSERT INTO `pages` (`pageID`, `pageTitle`, `isRoot`, `pageCont`) VALUES
-(1, 'Home', 0, '<p>Sample Sample content</p>'),
-(2, 'About', 1, '<p>Sample Sample content</p>'),
-(3, 'Services', 1, '<p>Sample Sample content</p>'),
-(4, 'News', 1, '<p>Sample Sample content</p>'),
-(5, 'Contact', 1, '<p>Sample Sample content</p>');
+INSERT INTO `pages` (`pageID`, `pageTitle`, `photo`, `pageCont`) VALUES
+(1, 'Home', 'photos/apple_pie_making.jpeg', '<p>Sample Sample content</p>'),
+(2, 'About', 'photos/carving_beef.jpeg', '<p>Sample Sample content</p>'),
+(3, 'Services', 'photos/food_tray.jpeg', '<p>Sample Sample content</p>'),
+(4, 'News', 'photos/pasta_making.jpeg', '<p>Sample Sample content</p>'),
+(5, 'Contact', 'photos/picnic_and_wine.jpeg', '<p>Sample Sample content</p>');
