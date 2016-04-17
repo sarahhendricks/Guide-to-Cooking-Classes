@@ -56,7 +56,7 @@
 			    mysql_free_result($result);
 		    ?>	
 		</div>
-
+		<iframe src="https://www.google.com/maps/d/u/1/embed?mid=zN4xwvTNZMW4.kYPEf1FWXYEM" width="100%" height="480"></iframe>
 
 	</div>
 
