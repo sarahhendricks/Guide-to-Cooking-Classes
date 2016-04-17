@@ -92,9 +92,19 @@ div {
 }
 
 .class {
-	border: 1px solid black;
-	margin: 15px;
-	padding: 5px;
+	border: 1px solid #ddd;
+	margin: 40px 90px;
+	padding: 100px auto 60px;
+}
+
+.class h4 {
+	margin: 10px;
+}
+.class p {
+	max-width: 500px;
+	margin-top: 10px;
+	font-size: 16px;
+	font-family: Helvetica, Arial, sans-serif;
 }
 
 footer {

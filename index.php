@@ -39,6 +39,7 @@
 	<div class="content">
 		<div class="welcome">
 			<p>Here is the welcome</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque a odio dui. Aliquam et condimentum nisi. Suspendisse at neque justo. Sed semper metus ac est lobortis, sed consectetur diam iaculis. Duis leo urna, rutrum sit amet mi sed, fermentum maximus ligula. Ut a maximus nunc. Aenean fringilla in enim id tristique. Pellentesque a bibendum tortor, eu semper est.</p>
 		</div>
 		<div class="classes">
 			<!-- 	
