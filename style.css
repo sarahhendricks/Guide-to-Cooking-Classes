@@ -94,24 +94,28 @@ div {
 .class {
 	border: 1px solid #ddd;
 	margin: 40px 90px;
-	padding: 100px auto 60px;
+	clear: both;
 }
 
 .classText {
+	float: right;
 	display: inline-block;
+	padding: 15px;
+	width: 43%;
 }
 .class h4 {
-	margin: 10px;
+	margin: 0 auto;
 }
 .class p {
 	max-width: 500px;
+	margin: 0 auto;
 	margin-top: 10px;
-	font-size: 16px;
+	font-size: 18px;
 	font-family: Helvetica, Arial, sans-serif;
+	line-height: 22px;
 }
 .class img {
 	width: 50%;
-
 }
 
 footer {
@@ -120,7 +124,7 @@ footer {
 	padding: 0;
 	text-align: center;
 	font-size: 13px;
-	background-color: #ccc;
+	background-color: #000;
 	height: 50px;
 }
 
@@ -132,10 +136,13 @@ footer ul {
 footer li {
 	display: inline;
 	text-align: center;
+	font-family: Helvetica, sans-serif;
 }
 footer a {
 	text-decoration: none;
 	display: inline-block;
 	padding: 8px;
 	font-size: 14px;
+	color: #fff;
+	letter-spacing: 3px;
 }
