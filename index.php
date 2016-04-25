@@ -15,7 +15,8 @@
 	<title><?php echo SITETITLE;?></title>
 	<meta charset="utf-8" />
 	<link type="text/css" rel="stylesheet" href="style.css" />
-	<script></script>
+	<script src="https://use.typekit.net/ahi7zjt.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
 </head>
 <body>
 	<header>
@@ -27,19 +28,17 @@
 						<!-- Make text bigger -->
 					</div>
 					<div class="float-right">
-						<li><a href="help.php">About</a></li>
 						<li class="sign-in"><a href="admin/login.php">Sign In</a></li>
 					</div>
 				</ul>
 			</nav>
 
-			<h1>Your guide to cooking classes in DC</h1>
+			<h1>Your guide to</h1><br><span class="script">Cooking Classes</span><br><h1>in DC</h1>
 		</div>
 	</header>
 	<div class="content">
 		<div class="welcome">
-			<p>Here is the welcome</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque a odio dui. Aliquam et condimentum nisi. Suspendisse at neque justo. Sed semper metus ac est lobortis, sed consectetur diam iaculis. Duis leo urna, rutrum sit amet mi sed, fermentum maximus ligula. Ut a maximus nunc. Aenean fringilla in enim id tristique. Pellentesque a bibendum tortor, eu semper est.</p>
+			<p>Ever wanted to learn to cook something delicious, but didn't know where to begin? Or have you been struggling to cut an onion since you can remember, and want to learn how to do it properly? Here in Washington D.C., we have plenty of places for you to learn new cooking techniques. Let real chefs teach you in one of these establishments, and you'll be on your way to being Julia Child in no time.</p>
 		</div>
 		<div class="classes">
 			<?php
@@ -50,7 +49,7 @@
 			    }
 			    else {
 				    while ($row = mysql_fetch_array($result)) {
-				        print "<div class=\"class\"><img src=\"".$row['photo']."\" /><div class=\"classText\"><h4>".$row['pageTitle']."</h4>".$row['pageCont']."<a></a></div></div>"; 
+				        print "<div class=\"class\"><img src=\"".$row['photo']."\" /><div class=\"classText\"><h4>".$row['pageTitle']."</h4>".$row['pageCont']."<p><a href=\"".$row['pageLink']."\" target=\"_blank\">More info</a></p></div></div>"; 
 				    }
 				}
 			    mysql_free_result($result);
