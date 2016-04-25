@@ -96,6 +96,10 @@ p {
 	background-position: center;
 }
 
+.title {
+	padding-top: 150px;
+}
+
 .jumbo h1 {
 	margin: 0 auto;
 	font-family: Helvetica, sans-serif;
@@ -104,14 +108,14 @@ p {
 	text-align: center;
 	color: #fff;
 	width: 95%;
-	padding-top: 150px;
 }
 
 .script {
 	margin: 0 auto;
+	text-align: center;
 	color: #fff;
 	width: 95%;
-	padding-top: 50px;
+	padding: 30px 0px;
 	font-family: "tangerine", Times, serif;
 	text-transform: capitalize;
 	font-weight: 500;
@@ -216,17 +220,21 @@ footer a {
 	.jumbo {
 		height: 350px;
 	}
+	.title {
+		margin-top: -80px;
+	}
 	.jumbo h1{
 		font-size: 27px;
-		padding-top: 70px;
 		font-weight: 600;
 		width: 85%;
 	}
 	.script{
 		font-size: 80px;
+		padding: 15px;
 	}
 	.welcome {
-		margin: 15px auto;
+		margin: 15px auto 0px auto;
+		width: 85%;
 	}
 	.welcome p{
 		font-size: 18px;

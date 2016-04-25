@@ -33,7 +33,9 @@
 				</ul>
 			</nav>
 
-			<h1>Your guide to</h1><br><span class="script">Cooking Classes</span><br><h1>in DC</h1>
+			<div class="title">
+				<h1>Your guide to</h1><div class="script">Cooking Classes</div><h1>in DC</h1>
+			</div>
 		</div>
 	</header>
 	<div class="content">
