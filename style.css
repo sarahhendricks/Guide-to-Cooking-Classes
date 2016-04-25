@@ -93,24 +93,41 @@ p {
 	height: 700px;
 	background-image: url(photos/ingredient_display.jpeg);
 	background-size: cover;
+	background-position: center;
 }
 
 .jumbo h1 {
 	margin: 0 auto;
-	font-family: Baskerville, Times, serif;
-	font-size: 90px;
+	font-family: Helvetica, sans-serif;
+	text-transform: uppercase;
+	font-size: 50px;
 	text-align: center;
 	color: #fff;
-	width: 700px;
+	width: 95%;
 	padding-top: 150px;
 }
 
-.welcome {
-	margin: 15px;
+.script {
+	margin: 0 auto;
+	color: #fff;
+	width: 95%;
+	padding-top: 50px;
+	font-family: "tangerine", Times, serif;
+	text-transform: capitalize;
+	font-weight: 500;
+	font-size: 200px;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
 }
+
+.welcome {
+	margin: 45px auto;
+	width: 65%;
+}
+
 .welcome p {
 	font-style: italic;
 	font-size: 23px;
+	line-height: 1.4em;
 }
 
 .class {
@@ -126,17 +143,31 @@ p {
 	padding: 15px;
 	width: 43%;
 }
+
 .class h4 {
 	margin: 0 auto;
 	font-family: Helvetica, Arial, sans-serif;
 	font-weight: bold;
-	font-size: 30px;
+	font-size: 36px;
+	color: #ffD300;
 }
+
+.class a {
+	font-family: "quicksand", Helvetica, sans-serif;
+	text-decoration: underline;
+	font-size: 18px;
+	color: #ffD300;
+}
+
+.class a:hover {
+	text-decoration: underline;
+}
+
 .class p {
 	max-width: 500px;
 	margin: 0 auto;
-	margin-top: 10px;
-	
+	margin-top: 15px;
+	line-height: 1.5em;
 }
 .class img {
 	width: 50%;
@@ -178,4 +209,49 @@ footer a {
 	font-size: 14px;
 	color: #fff;
 	letter-spacing: 3px;
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+	.jumbo {
+		height: 350px;
+	}
+	.jumbo h1{
+		font-size: 27px;
+		padding-top: 70px;
+		font-weight: 600;
+		width: 85%;
+	}
+	.script{
+		font-size: 80px;
+	}
+	.welcome {
+		margin: 15px auto;
+	}
+	.welcome p{
+		font-size: 18px;
+	}
+	.class {
+		margin: 50px 20px;
+	}
+	.classText {
+		float: left;
+		padding: 15px;
+		width: 90%;
+	}
+	.class p {
+		margin-top: 15px;
+		font-size: 16px;
+		line-height: 1.5em;
+	}
+	.class img {
+		width: 100%;
+	}
+
+	.class a {
+		font-family: "quicksand", Helvetica, sans-serif;
+		text-decoration: underline;
+		font-size: 16px;
+		color: #ffD300;
+	}
 }
