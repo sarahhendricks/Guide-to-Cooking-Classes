@@ -51,7 +51,7 @@
 			    }
 			    else {
 				    while ($row = mysql_fetch_array($result)) {
-				        print "<div class=\"class\"><img src=\"".$row['photo']."\" /><div class=\"classText\"><h4>".$row['pageTitle']."</h4>".$row['pageCont']."<p><a href=\"".$row['pageLink']."\" target=\"_blank\">More info</a></p></div></div>"; 
+				        print "<div class=\"class\"><img src=\"".$row['photo']."\" /><div class=\"classText\"><h4>".$row['pageTitle']."</h4>".$row['pageCont']."<p><a href=\"".$row['pageLink']."\" target=\"_blank\">More info</a></p><p class=\"photoCredit\">Photo by: ".$row['photoCredit']."</p></div></div>"; 
 				    }
 				}
 			    mysql_free_result($result);
