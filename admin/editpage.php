@@ -58,13 +58,14 @@
         ?>
         <form action="" method="post">
             <input type="hidden" name="pageID" value="<?php echo $row->pageID;?>">
-            <p>Title: </p><br>
+            <p>Title: </p>
             <input name="pageTitle" id="pageTitle" value="<?php echo $row->pageTitle; ?>" type="text" size="103">
             <p>Photo Link: </p>
-            <input name="photo" id="photo" value="<?php echo $row->photo; ?>" type="file" size="50" />
+            <p><?php echo $row->photo; ?></p>
+            <input name="photo" id="photo" value="" type="file" size="50" />
             <p>Photo Credit: </p>
             <textarea name="photoCredit" id="photoCredit" type="text" cols="100" rows="1"><?php echo $row->photoCredit; ?></textarea>
-            <p>Content</p><br>
+            <p>Content</p>
             <textarea name="pageCont" id="pageCont" cols="100" rows="20"><?php echo $row->pageCont; ?></textarea>
             <p><input type="submit" name="submit" id="submit" value="Submit"></p>
         </form>
