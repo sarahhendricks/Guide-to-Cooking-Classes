@@ -42,11 +42,13 @@
 
     <div class="add-page">
         <form action="" method="post">
-            <p>Title: </p><br>
+            <p>Title: </p>
             <input name="pageTitle" id="pageTitle" value="" type="text" size="103" />
             <p>Photo Link: </p>
             <input name="photo" id="photo" value="" type="file" size="50" />
-            <p>Content: </p><br>
+            <p>Photo Credit: </p>
+            <textarea name="photoCredit" id="photoCredit" type="text" cols="100" rows="1"><a href="" target="_blank"> SOURCE </a></textarea>
+            <p>Content: </p>
             <textarea name="pageCont" id="pageCont" cols="100" rows="20"></textarea>
             <p><input type="submit" name="submit" id="submit" value="Submit"></p>
         </form>

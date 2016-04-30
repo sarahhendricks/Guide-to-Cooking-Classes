@@ -64,9 +64,7 @@
 
 	<footer>
 		<ul>
-			<li><a href="about.php">About</a></li>
-			<li><a href="contact.php">Contact</a></li>
-			<li><a href="">Follow</a></li>
+			<li><a>&copy;Sarah Hendricks 2016</a></li>
 		</ul>
 	</footer>
 </body>
