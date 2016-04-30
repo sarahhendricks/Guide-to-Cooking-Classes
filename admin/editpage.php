@@ -55,7 +55,6 @@
         $query = mysql_query("SELECT * FROM pages WHERE pageID='$id'");
         
         $row = mysql_fetch_object($query);
-        //echo $row;
         ?>
         <form action="" method="post">
             <input type="hidden" name="pageID" value="<?php echo $row->pageID;?>">
@@ -64,7 +63,7 @@
             <p>Photo Link: </p>
             <input name="photo" id="photo" value="<?php echo $row->photo; ?>" type="file" size="50" />
             <p>Photo Credit: </p>
-            <input name="photoCredit" id="photoCredit" value="<?php echo $row->photoCredit; ?>" type="text" size="100" />
+            <textarea name="photoCredit" id="photoCredit" type="text" cols="100" rows="1"><?php echo $row->photoCredit; ?></textarea>
             <p>Content</p><br>
             <textarea name="pageCont" id="pageCont" cols="100" rows="20"><?php echo $row->pageCont; ?></textarea>
             <p><input type="submit" name="submit" id="submit" value="Submit"></p>
