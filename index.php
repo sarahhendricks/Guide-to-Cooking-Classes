@@ -34,7 +34,7 @@
 			</nav>
 
 			<div class="title">
-				<h1>Your guide to</h1><div class="script">Cooking Classes</div><h1>in DC</h1>
+				<div class="script">Cooking Classes</div><h1>A DC Guide</h1>
 			</div>
 		</div>
 	</header>
