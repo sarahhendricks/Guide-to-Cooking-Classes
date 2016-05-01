@@ -61,8 +61,7 @@
             <p>Title: </p>
             <input name="pageTitle" id="pageTitle" value="<?php echo $row->pageTitle; ?>" type="text" size="103">
             <p>Photo Link: </p>
-            <p><?php echo $row->photo; ?></p>
-            <input name="photo" id="photo" value="" type="file" size="50" />
+            <input name="photo" id="photo" value="<?php echo $row->photo; ?>" type="text" size="100" />
             <p>Photo Credit: </p>
             <textarea name="photoCredit" id="photoCredit" type="text" cols="100" rows="1"><?php echo $row->photoCredit; ?></textarea>
             <p>Content</p>
