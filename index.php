@@ -26,7 +26,6 @@
 				<ul>
 					<div class="float-left">
 						<li><a href="index.php">Home</a></li>
-						<!-- Make text bigger -->
 					</div>
 					<div class="float-right">
 						<li class="sign-in"><a href="admin/login.php">Sign In</a></li>
@@ -47,7 +46,6 @@
 		<div class="classes">
 			<?php
 			    $result = mysql_query("SELECT * FROM pages;");
-			    //query the database & print out 
 			    if (mysql_num_rows($result) == 0) {
 			    	print "Sorry, we don't have any classes right now.";
 			    }
@@ -59,6 +57,8 @@
 			    mysql_free_result($result);
 		    ?>	
 		</div>
+		<!-- Next line prevents zooming on map while the mouse is scrolling down the page
+			 Source:  Lesenus on Stack Overflow, http://bit.ly/1EkeknJ -->
 		<div class="overlay" onClick="style.pointerEvents='none'"></div>
 		<iframe src="https://www.google.com/maps/d/u/1/embed?mid=zN4xwvTNZMW4.kYPEf1FWXYEM" width="100%" height="480"></iframe>
 
