@@ -3,8 +3,8 @@
 	src: url("quicksand/Quicksand-Light.otf");
 }
 @font-face {
-	font-family: "quicksand";
-	src: url("quicksand/Quicksand-Normal.otf");
+	font-family: "quicksand-regular";
+	src: url("quicksand/Quicksand-Regular.otf");
 }
 body {
 	background-color: #fff;
@@ -270,9 +270,8 @@ footer a {
 	}
 	.jumbo h1{
 		font-size: 27px;
-		font-weight: 600;
+		font-weight: 500;
 		width: 85%;
-		letter-spacing: 2px;
 	}
 	.script{
 		font-size: 95px;
