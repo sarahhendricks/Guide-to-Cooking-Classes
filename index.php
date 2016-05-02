@@ -14,6 +14,7 @@
 <head>
 	<title><?php echo SITETITLE;?></title>
 	<meta charset="utf-8" />
+	<link href='https://fonts.googleapis.com/css?family=Cutive+Mono' rel='stylesheet' type='text/css'>
 	<link type="text/css" rel="stylesheet" href="style.css" />
 	<script src="https://use.typekit.net/ahi7zjt.js"></script>
 	<script>try{Typekit.load({ async: true });}catch(e){}</script>
@@ -34,7 +35,8 @@
 			</nav>
 
 			<div class="title">
-				<div class="script">Cooking Classes</div><h1>A DC Guide</h1>
+				<h1>A DC Guide to</h1>
+				<div class="script">Cooking Classes</div>
 			</div>
 		</div>
 	</header>
